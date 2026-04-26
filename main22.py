@@ -170,12 +170,12 @@ while True:
         
         #キーの内容
         entry_content = values['input_content']
-        entry_calander = values['text_date']
+        entry_calendar = values['text_date']
         income = values['input_income']
         expense = values['input_expense']
 
         #入力内容のバリデーション
-        if not entry_calander:
+        if not entry_calendar:
             sg.popup('日付を選択してください')
             continue
 
@@ -203,7 +203,7 @@ while True:
         #保存分岐
         if edit_index is not None:
             history_data[edit_index] = [
-                entry_calander,
+                entry_calendar,
                 choose_item,
                 entry_content,
                 int(income),
@@ -214,7 +214,7 @@ while True:
             edit_index = None #編集モード終了
         else:
             history_data.append([
-                entry_calander,
+                entry_calendar,
                 choose_item,
                 entry_content,
                 int(income),
